@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Card, Icon, Table } from 'react-materialize'
 import {useSelector, useDispatch} from 'react-redux'
+import { DeleteCita } from '../redux/actions/citasAction'
 const ListarCitas = () => {
 
 const dispatch = useDispatch()
@@ -10,7 +11,7 @@ const dispatch = useDispatch()
 const {citas} = useSelector(state => state.citas)
 
 const handleBorrar = (id)=>{
-dispatch(DeleteCitas(id))
+dispatch(DeleteCita(id))
 
 }
 
